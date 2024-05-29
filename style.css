@@ -1,0 +1,59 @@
+.snake{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    animation-name: snake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    border-radius: 80%;
+}
+
+.snake::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    margin-left: 130px;
+    border-radius: 100%;
+}
+
+.text{
+    padding-left: 90px;
+}
+
+
+
+@keyframes snake {
+    0% {
+        margin: 0px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        margin: 0px;
+        margin-left: 500px;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        margin-left: 500px;
+        margin-top: 500px;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        margin-top: 500px;
+        margin-right: 500px;
+        margin-left: 0px;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        margin-bottom: 500px;
+        transform: rotate(360deg);
+    }
+} 
+
